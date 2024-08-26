@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contraste de Cores</title>
+    <style>
+        body {
+            background-color: #6226c2; /* Cor de fundo */
+            color: #000000; /* Cor do texto */
+            display: flex; /* Define o display do body como flex */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Ocupa a altura total da tela */
+            margin: 0; /* Remove margens padrão */
+        }
+
+        /* Estilo de alto contraste */
+        .high-contrast {
+            background-color: #000000; /* Cor de fundo de alto contraste */
+            color: #ffffff; /* Cor do texto de alto contraste */
+        }
+
+        /* Estilo do botão de alternância */
+        #contrast-toggle {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        /* Estilo dos botões de exemplo */
+        .color-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            color: #ffffff; /* Cor do texto branco por padrão */
+            cursor: pointer;
+        }
+
+        .btn-red {
+            background-color: #e74c3c; /* Vermelho */
+        }
+
+        .btn-green {
+            background-color: #27ae60; /* Verde */
+        }
+
+        .btn-blue {
+            background-color: #3498db; /* Azul */
+        }
+
+        .btn-yellow {
+            background-color: #f1c40f; /* Amarelo */
+            color: #000000; /* Cor do texto preto para contraste */
+        }
+
+        /* Estilos de botões em modo de alto contraste */
+        .high-contrast .color-button {
+            background-color: #000000; /* Fundo preto para todos os botões */
+            color: #ffffff; /* Texto branco para contraste */
+            border: 2px solid #ffffff; /* Borda branca para destaque */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Botão para alternar contraste -->
+        <button id="contrast-toggle">Ativar Contraste Alto</button>
+
+        <!-- Botões de exemplo com cores diferentes -->
+        <button class="color-button btn-red">Botão Vermelho</button>
+        <button class="color-button btn-green">Botão Verde</button>
+        <button class="color-button btn-blue">Botão Azul</button>
+        <button class="color-button btn-yellow">Botão Amarelo</button>
+    </div>
+
+    <script>
+        function toggleHighContrast() {
+            // Alterna a classe de alto contraste no corpo do documento
+            document.body.classList.toggle('high-contrast');
+            
+            // Muda o texto do botão conforme o modo de contraste
+            const button = document.getElementById('contrast-toggle');
+            if (document.body.classList.contains('high-contrast')) {
+                button.textContent = 'Desativar Contraste Alto';
+            } else {
+                button.textContent = 'Ativar Contraste Alto';
+            }
+        }
+
+        // Adiciona um evento de clique ao botão para alternar o contraste
+        document.getElementById('contrast-toggle').addEventListener('click', toggleHighContrast);
+    </script>
+</body>
+</html>
