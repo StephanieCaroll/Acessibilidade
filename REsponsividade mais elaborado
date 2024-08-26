@@ -1,0 +1,223 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container Principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Seções */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Sobre Mim */
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* Projetos */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Contato */
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact form {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact form button:hover {
+            background-color: #555;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .projects {
+                flex-direction: column;
+            }
+
+            .project-card {
+                flex: 1 1 100%;
+            }
+
+            .contact form {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <a href="#about">Sobre Mim</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Seção Sobre Mim -->
+        <div id="about" class="section about">
+            <img src="https://img.freepik.com/fotos-premium/homem-programador-alegre-usando-oculos-trabalhando-com-computadores-no-escritorio_132358-22001.jpg" alt="Minha Foto">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou um desenvolvedor web apaixonado por criar soluções inovadoras e funcionais. Tenho experiência em diversas tecnologias e adoro aprender novas habilidades.</p>
+        </div>
+
+        <!-- Seção Projetos -->
+        <div id="projects" class="section projects">
+            <div class="project-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA8pAKf_utTdYIIZ12n0JO784am8MfEeFosQ&s" alt="Projeto 1">
+                <h3>E-commerce</h3>
+                <p>Bem-vindo ao Shopify, seu destino online para uma experiência de compras inesquecível! Oferecemos uma ampla gama de produtos de alta qualidade, desde eletrônicos e moda até itens para casa e decoração. Nossa missão é trazer para você o que há de melhor em cada categoria, com um compromisso inabalável com a satisfação do cliente.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://storage.googleapis.com/tweek-assets/promo-pt-br.png" alt="Projeto 2">
+                <h3>Organizador de Tarefas</h3>
+                <p>TaskMaster é o seu assistente pessoal definitivo para gerenciar tarefas e maximizar sua produtividade. Com uma interface intuitiva e funcionalidades poderosas, nosso aplicativo foi projetado para ajudar você a manter o foco, organizar suas atividades diárias e alcançar seus objetivos com eficiência.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://artia.com/wp-content/uploads/2019/08/ferramenta-para-curso-ead-eadbox.jpg" alt="Projeto 3">
+                <h3>Plataforma de Cursos Online</h3>
+                <p>LearnHub é uma plataforma de aprendizado online projetada para conectar alunos e instrutores em um ambiente colaborativo e intuitivo. Com LearnHub, instrutores podem criar cursos, adicionar materiais de leitura e vídeo, e interagir com os alunos através de fóruns e chat. Os alunos podem acessar uma vasta gama de cursos, acompanhar seu progresso e receber certificados de conclusão. O aplicativo também inclui avaliações e feedbacks para melhorar a qualidade do aprendizado.</p>
+            </div>
+        </div>
+
+        <!-- Seção Contato -->
+        <div id="contact" class="section contact">
+            <h2>Contato</h2>
+            <form>
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Meu Portfólio</p>
+    </footer>
+</body>
+</html>
