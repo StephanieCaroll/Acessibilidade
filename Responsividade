@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Responsividade</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Cor de fundo da página, combinando com o cabeçalho e rodapé */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            background-color: #333; /* Cor de fundo do cabeçalho */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        /* Container Principal */
+        .container {
+            display: flex; /* Exibe os elementos em linha */
+            flex-wrap: wrap; /* Permite que os elementos se movam para a linha seguinte se necessário */
+            margin: 20px;
+            max-width: 1200px; /* Limita a largura máxima do container */
+        }
+
+        /* Colunas */
+        .column {
+            flex: 1; /* Todas as colunas têm o mesmo tamanho */
+            padding: 20px;
+            box-sizing: border-box;
+            min-width: 200px; /* largura mínima para colunas */
+            background-color: #f4f4f4; /* Cor de fundo das colunas */
+            margin: 10px;
+            border-radius: 8px; /* Bordas arredondadas para as colunas */
+            text-align: center;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            background-color: #333; /* Cor de fundo do rodapé */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Parte Responsiva - Aplica estilos diferentes para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            /* Responsividade começa aqui */
+            
+            .container {
+                flex-direction: column; /* Muda a direção do layout de linha para coluna */
+            }
+
+            .column {
+                flex: 100%; /* As colunas agora ocupam 100% da largura */
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Exemplo de Responsividade</h1>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <div class="column">
+            <h2>Coluna 1</h2>
+        </div>
+        <div class="column">
+            <h2>Coluna 2</h2>
+        </div>
+        <div class="column">
+            <h2>Coluna 3</h2>
+        </div>
+        <div class="column">
+            <h2>Coluna 4</h2>
+        </div>
+        <div class="column">
+            <h2>Coluna 5</h2>
+        </div>
+        <div class="column">
+            <h2>Coluna 6</h2>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Responsividade</p>
+    </footer>
+</body>
+</html>
