@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Ajuste de Tamanho de Fonte</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .font-controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .font-controls button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .font-controls button:hover {
+            background-color: #555;
+        }
+
+        .content {
+            font-size: 16px; /* Tamanho padrão da fonte */
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ajuste de Tamanho da Fonte</h1>
+    </header>
+
+    <div class="container">
+        <div class="font-controls">
+            <button onclick="adjustFontSize('decrease')">Diminuir Fonte</button>
+            <button onclick="adjustFontSize('increase')">Aumentar Fonte</button>
+        </div>
+
+        <div class="content">
+            <h2>Bem-vindo ao nosso site</h2>
+            <p>Este é um exemplo de site com funcionalidade para ajustar o tamanho da fonte. Use os botões acima para aumentar ou diminuir o tamanho da fonte e veja como o texto se ajusta de acordo.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para ajustar o tamanho da fonte
+        function adjustFontSize(action) {
+            const content = document.querySelector('.content');
+            let currentSize = window.getComputedStyle(content).fontSize;
+            currentSize = parseFloat(currentSize);
+
+            if (action === 'increase') {
+                content.style.fontSize = (currentSize + 2) + 'px';
+            } else if (action === 'decrease') {
+                content.style.fontSize = (currentSize - 2) + 'px';
+            }
+        }
+    </script>
+</body>
+</html>
