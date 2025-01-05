@@ -1,4 +1,4 @@
-🌟 Sobre o Projeto
+## 🌟 Sobre o Projeto
 Este repositório foi criado para compartilhar códigos e exemplos de sites acessíveis , com foco em boas práticas de acessibilidade na web . O objetivo principal é demonstrar como criar interfaces que sejam inclusivas e funcionais para todos os usuários, incluindo aqueles com deficiências visuais, auditivas, motoras e cognitivas .
 
 ## 📚 O Que Você Vai Encontrar Aqui?
